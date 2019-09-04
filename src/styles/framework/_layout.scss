@@ -1,0 +1,36 @@
+// layout.scss
+
+html, body, #root, main {
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $grey;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  padding: $spacing02;
+  flex: 1 auto;
+  overflow-y: auto;
+}
+
+img {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited, svg {
+    color: $grey00;
+  }
+}

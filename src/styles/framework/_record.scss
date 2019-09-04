@@ -1,0 +1,29 @@
+.main-container {
+
+  .hide-on-expand {
+    display: block;
+  }
+
+  .record {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transition: top, left .5s ease-in-out;
+    transition: top, left .5s ease-in-out;
+  }
+}
+
+.main-container.full-page {
+
+  .hide-on-expand {
+    display: none;
+  }
+
+  .record {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}

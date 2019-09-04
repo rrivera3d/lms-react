@@ -1,0 +1,11 @@
+// utilities.scss
+
+.flex-grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-rows: repeat(1, auto);
+}
+
+.flex-grid-item-width360 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
