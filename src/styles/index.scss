@@ -1,0 +1,16 @@
+// ENTRY POINT
+// Using '//' -- comments will not show up on the browser
+// Using '/* */' will show the comment in the browser.  Useful for debugging.
+
+// DO NOT PUT STYLES IN HERE.  JUST IMPORTS
+
+// FRAMEWORK
+@import './framework/colors.scss';
+@import './framework/fonts.scss';
+@import './framework/spacing.scss';
+@import './framework/utilities.scss';
+@import './framework/layout.scss';
+
+// COMPONENTS
+@import './framework/app.scss';
+@import './framework/record.scss';

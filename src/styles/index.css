@@ -1,0 +1,124 @@
+.flex-grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-rows: repeat(1, auto); }
+
+.flex-grid-item-width360 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+
+html, body, #root, main {
+  height: 100%;
+  display: block;
+  overflow: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA; }
+
+#root {
+  display: flex;
+  flex-direction: column; }
+
+.main-container {
+  padding: 16px;
+  flex: 1 auto;
+  overflow-y: auto; }
+
+img {
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+  a:visited, a svg {
+    color: #5F625F; }
+
+.app {
+  flex-direction: column;
+  display: flex;
+  height: 100%; }
+  .app.logged-in {
+    background-color: #FAFAFA;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out; }
+    .app.logged-in .global-app-bar {
+      height: 48px;
+      -webkit-transition: height .5s ease-in-out;
+      transition: height .5s ease-in-out; }
+      .app.logged-in .global-app-bar .toolbar {
+        opacity: 1;
+        height: 48px;
+        min-height: 48px;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out; }
+      .app.logged-in .global-app-bar .login-form {
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+        -webkit-transition: opacity .2s ease;
+        transition: opacity .2s ease; }
+    .app.logged-in .local-app-bar {
+      opacity: 1;
+      -webkit-transition: opacity .2s ease-out;
+      transition: opacity .2s ease-out; }
+    .app.logged-in .main-container {
+      height: 100%;
+      opacity: 1;
+      -webkit-transition: height, opacity .5s ease-in-out .2s;
+      transition: height, opacity .5s ease-in-out .2s; }
+  .app.logged-out {
+    background-color: #333;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out; }
+    .app.logged-out .global-app-bar {
+      height: 80%;
+      -webkit-transition: height .4s ease-in-out;
+      transition: height .4s ease-in-out; }
+      .app.logged-out .global-app-bar .toolbar {
+        opacity: 0;
+        height: 0;
+        min-height: 0;
+        overflow: hidden;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out; }
+      .app.logged-out .global-app-bar .login-form {
+        opacity: 1;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+        -webkit-transition: opacity .4s ease .2s;
+        transition: opacity .4s ease .2s; }
+      .app.logged-out .global-app-bar:before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%); }
+    .app.logged-out .local-app-bar {
+      opacity: 0;
+      -webkit-transition: opacity .2s ease-out;
+      transition: opacity .2s ease-out; }
+    .app.logged-out .main-container {
+      height: 0;
+      opacity: 0;
+      -webkit-transition: opacity .1s ease;
+      transition: opacity .1s ease; }
+
+.main-container .hide-on-expand {
+  display: block; }
+
+.main-container .record {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: top, left .5s ease-in-out;
+  transition: top, left .5s ease-in-out; }
+
+.main-container.full-page .hide-on-expand {
+  display: none; }
+
+.main-container.full-page .record {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
